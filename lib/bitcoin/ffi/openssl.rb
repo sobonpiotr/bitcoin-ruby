@@ -10,7 +10,7 @@ module Bitcoin
     if FFI::Platform.windows?
       ffi_lib 'libeay32', 'ssleay32'
     else
-      ffi_lib ['libssl.so.1.0.0', 'ssl']
+      ffi_lib [ 'libssl.so.1.0.2', 'libssl.so.1.0.0', 'ssl' ]
     end
 
     NID_secp256k1 = 714 # rubocop:disable Naming/ConstantName
